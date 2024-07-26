@@ -54,4 +54,9 @@ async def send_ip(ctx):
     else:
         await ctx.send("IP address not yet determined.")
 
+@bot.command(name='check4newip')
+async def check_for_new_ip(ctx):
+    await check_ip_change()
+    await ctx.send("Manual IP check completed.")
+
 bot.run(DISCORD_TOKEN)
